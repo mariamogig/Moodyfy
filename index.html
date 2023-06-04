@@ -4,71 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/2475799efc.js" crossorigin="anonymous"></script>
-    <title>Moodyfy PLayer</title>
+    <title>Moodyfy</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="container">
-        <div class="music-player">
-            <nav class="icons">
-                <div class="circle">
-                    <i class="fa fa-solid fa-angle-left"></i>   
-                </div>
-                <div class="circle">
-                    <i class="fa fa-solid fa-bars"></i>
-                </div>
-            </nav>
-            <img src="images/Daddy_Yankee.png" class="song-img" alt="songImage">
-            <h1> Gasolina</h1>
-            <span> Daddy Yankee</span>
-            <audio id="song">
-                <source src="media/Gasolina.mp3" type="audio/mpeg">
-            </audio>
-            <input type="range" value="0" id="progress">
-            <div class="controls">
-                <div><i class="fa fa-solid fa-backward"></i></div>
-                <div onclick="playPause()"> <i class="fa fa-solid fa-play" id="ctrlIcon"></i></div>
-                <div><i class="fa fa-solid fa-forward"></i></div>
-            </div>
-        </div>
+    <div class="">
+        <h1 class="caption">🅶🅸🅶🅰 🅱🆄🆁🆉🅷🆄🅰🆉🅸🅰 🅰🆂🅺🆂 </h1> 
     </div>
-    <script>
-        let progress = document.getElementById("progress");
-        let song = document.getElementById("song");
-        let ctrlIcon = document.getElementById("ctrlIcon");
-       
- 
-        song.onloadedmetadata = function() {
-            progress.max = song.duration;
-            progress.value = song.currentTime;
-        }
-        function playPause() {
-            if(ctrlIcon.classList.contains(`fa-pause`)){
-                song.pause();
-                ctrlIcon.classList.remove(`fa-pause`); 
-                ctrlIcon.classList.add(`fa-play`);  
-                          
-            } else {
-                song.play();
-                ctrlIcon.classList.add(`fa-pause`); 
-                ctrlIcon.classList.remove(`fa-play`);      
-            }
-            
-        }
-        if(song.play()) {
-            setInterval(() => {
-                progress.value = song.currentTime;   
-            }, 100);
-        }
-        progress.onchange = function() {
-            song.play();
-            song.currentTime = progress.value;
-            ctrlIcon.classList.add(`fa-pause`); 
-            ctrlIcon.classList.remove(`fa-play`); 
-        }
-        
-    </script>
+      
 </body>
 </html>
