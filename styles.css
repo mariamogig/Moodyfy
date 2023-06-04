@@ -94,7 +94,22 @@
 }
 
 
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .caption {
     margin: 200px;
     font-size: 90px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    max-width: 3000px;
+}
+.flex h2 {
+    font-size: 80px;
+    width: 900px;
+    padding-left: 60px;
 }
