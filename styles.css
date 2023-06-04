@@ -122,7 +122,7 @@
     width: 350px;
     height: 110px;
     font-size: 37px;
-    
+    cursor: pointer;    
     background-color: yellow;
     border: none;
     border-radius: 12px;
